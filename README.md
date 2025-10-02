@@ -1,4 +1,3 @@
-```markdown
 # Face-Recognition Demo 🚀
 A tiny, no-frills demo that shows how to detect a face in a group photo and check whether it matches a known person – then display the two faces side-by-side.
 
@@ -144,7 +143,5 @@ Pull requests & issues are welcome – let’s keep it simple and educational.
 Code licensed under the MIT License (see `LICENSE`).
 
 Happy coding – and happy face-matching! 😄
-```
 
-Save this as `README.md` in the root of your GitHub repo.  
-Anyone landing on the project page can now clone, install, and run the demo in minutes.
+
