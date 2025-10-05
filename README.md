@@ -49,7 +49,7 @@ Or, Run these commands **one by one**:
 pip install cmake
 pip install dlib==19.24.9
 pip install opencv-contrib-python
-pip install face_recognition
+pip install face-recognition
 ```
 
 

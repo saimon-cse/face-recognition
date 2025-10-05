@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6517a0a6-1ee9-4ce5-8ac0-ce244230c270" name="Changes" comment="" />
+    <list default="true" id="6517a0a6-1ee9-4ce5-8ac0-ce244230c270" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/code3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code5_csv.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/group.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/group1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/group2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/known_people/Saimon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/known_people/aupo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/known_people/deb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/known_people/img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/Lib/site-packages/cv2/__init__.pyi" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/cv2/__init__.pyi" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +46,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "C:/Users/Saimon Islam/PycharmProjects/PythonProject1",
@@ -48,6 +62,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Saimon Islam\PycharmProjects\PythonProject1" />
+      <recent name="C:\Users\Saimon Islam\PycharmProjects\PythonProject1\known_people" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -68,6 +83,7 @@
       <workItem from="1759400752370" duration="173000" />
       <workItem from="1759401002997" duration="1766000" />
       <workItem from="1759402876243" duration="484000" />
+      <workItem from="1759487517584" duration="8949000" />
     </task>
     <servers />
   </component>
