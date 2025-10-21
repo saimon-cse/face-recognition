@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const https = require('https');
 
-const BASE_URL = 'https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/weights';
+const BASE_URL = 'https://raw.githubusercontent.com/justadudewhohacks/face-api.js/master/weights';
 const TARGET_DIR = path.join(__dirname, '..', 'models');
 
 const FILES = [
@@ -10,9 +10,9 @@ const FILES = [
   'tiny_face_detector_model-shard1',
   'face_landmark_68_model-weights_manifest.json',
   'face_landmark_68_model-shard1',
-  'face_landmark_68_model-shard2',
   'face_recognition_model-weights_manifest.json',
-  'face_recognition_model-shard1'
+  'face_recognition_model-shard1',
+  'face_recognition_model-shard2'
 ];
 
 function ensureDirSync(dir) {
