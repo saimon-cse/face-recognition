@@ -24,20 +24,26 @@ This project contains a browser-based attendance application that recognises fac
    npm install
    ```
 
-2. **Set environment variables**  
+2. **Download face-api.js model weights**  
+   ```bash
+   npm run download-models
+   ```
+   The script stores the required files in `models/`, which the browser loads from `http://localhost:3000/models`.
+
+3. **Set environment variables**  
    Copy `.env.example` to `.env` and set your MySQL connection details.
 
-3. **Create the schema**
+4. **Create the schema**
    ```bash
    mysql -u <user> -p <database> < db/schema.sql
    ```
 
-4. **Run the server**
+5. **Run the server**
    ```bash
    npm start
    ```
 
-5. **Use the app**  
+6. **Use the app**  
    Browse to `http://localhost:3000`, create a course, enrol students (one face per capture), and start an attendance session.
 
 ## Key API Endpoints

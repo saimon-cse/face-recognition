@@ -1,4 +1,4 @@
-const MODEL_URL = 'https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/weights';
+const MODEL_URL = '/models';
 const API_BASE = '/api';
 
 const DETECTOR_OPTIONS = new faceapi.TinyFaceDetectorOptions({
@@ -172,7 +172,7 @@ async function loadModels() {
     elements.modelStatus.textContent = 'Models loaded. You can start enrolling students.';
   } catch (error) {
     console.error(error);
-    elements.modelStatus.textContent = 'Failed to load models. Check your network connection.';
+    elements.modelStatus.textContent = 'Failed to load models. Verify /models files exist and reload.';
   }
 }
 
