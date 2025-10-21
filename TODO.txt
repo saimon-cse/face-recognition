@@ -1,0 +1,5 @@
+TODO:
+
+i want to make a attendance system using webcam face recognition. 
+befor attendance take i will select course name, then students will show their faces(one by one or group) 
+on webcam, the and it will take attendance automatically. 

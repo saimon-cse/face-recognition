@@ -1,0 +1,33 @@
+CREATE TABLE IF NOT EXISTS courses (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL UNIQUE,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS students (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  course_id INT NOT NULL,
+  name VARCHAR(100) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE KEY unique_student_per_course (course_id, name),
+  FOREIGN KEY (course_id) REFERENCES courses (id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS face_descriptors (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  student_id INT NOT NULL,
+  descriptor JSON NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (student_id) REFERENCES students (id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS attendance (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  student_id INT NOT NULL,
+  course_id INT NOT NULL,
+  recorded_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (student_id) REFERENCES students (id) ON DELETE CASCADE,
+  FOREIGN KEY (course_id) REFERENCES courses (id) ON DELETE CASCADE
+);
+
+CREATE INDEX idx_attendance_course_time ON attendance (course_id, recorded_at DESC);
