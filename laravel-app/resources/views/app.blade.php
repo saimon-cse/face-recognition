@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Attendance</title>
+    <link rel="stylesheet" href="{{ asset('styles.css') }}">
+    <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+    <script defer src="{{ asset('script.js') }}"></script>
+</head>
+<body>
+<header>
+    <h1>Webcam Face Attendance</h1>
+    <p class="subtitle">Select a course, enroll students with their face data, and run automated attendance.</p>
+</header>
+
+<main>
+    <section id="camera-section">
+        <div class="video-wrapper">
+            <video id="video" autoplay muted playsinline></video>
+            <canvas id="overlay"></canvas>
+        </div>
+        <div id="status-panel">
+            <p id="model-status">Loading face recognition models...</p>
+            <p id="camera-status">Camera inactive</p>
+        </div>
+    </section>
+
+    <section id="course-management" class="panel">
+        <h2>Courses</h2>
+        <form id="course-form">
+            <label for="new-course-name">New course name</label>
+            <div class="inline-group">
+                <input id="new-course-name" type="text" placeholder="e.g. CS101" required>
+                <button type="submit">Add</button>
+            </div>
+        </form>
+        <label for="course-select">Active course</label>
+        <select id="course-select">
+            <option value="">-- Create a course or choose one --</option>
+        </select>
+    </section>
+
+    <section id="student-registration" class="panel">
+        <h2>Student Enrollment</h2>
+        <form id="student-form">
+            <label for="student-name">Student name</label>
+            <input id="student-name" type="text" placeholder="Student full name" required>
+            <p class="hint">Ensure exactly one face is visible before capturing.</p>
+            <button type="submit">Capture &amp; Save Face Sample</button>
+        </form>
+        <div class="info">
+            <h3>Registered students</h3>
+            <ul id="student-list"></ul>
+        </div>
+    </section>
+
+    <section id="attendance-panel" class="panel">
+        <h2>Attendance Session</h2>
+        <div class="controls">
+            <button id="start-attendance">Start Session</button>
+            <button id="stop-attendance" disabled>Stop Session</button>
+        </div>
+        <div class="info">
+            <h3>Recognized during this session</h3>
+            <ul id="recognition-log"></ul>
+        </div>
+    </section>
+
+    <section id="attendance-log" class="panel">
+        <h2>Attendance Log</h2>
+        <p class="hint">Stop the session to refresh the log.</p>
+        <table>
+            <thead>
+            <tr>
+                <th>Student</th>
+                <th>Course</th>
+                <th>Timestamp</th>
+            </tr>
+            </thead>
+            <tbody id="attendance-table-body"></tbody>
+        </table>
+    </section>
+</main>
+</body>
+</html>
